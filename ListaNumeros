@@ -1,0 +1,39 @@
+from os import system
+system('cls')
+
+print("Bienvenido")
+lista=[]
+i=0
+while(i<3): 
+    numerodeusuario1 = int(input("coloque un numero  " +str(i+1) +": "))
+    lista.append(numerodeusuario1)
+    i+=1
+    numerodeusuario2 = int(input("coloque un numero  " +str(i+1) +": "))
+    lista.append(numerodeusuario2)
+    i+=1
+    numerodeusuario3 = int(input("coloque un numero  " +str(i+1) +": "))
+    lista.append(numerodeusuario3)
+    i+=1
+
+print(lista)
+print("Estos son tus 3 numeros colocados, Ahora te mostraremos cual es el mayor")
+
+if numerodeusuario1 > numerodeusuario2 and numerodeusuario1 > numerodeusuario3:
+   print(numerodeusuario1)
+   print("Este es el numero mas grande de todos")
+elif numerodeusuario2 > numerodeusuario1 and numerodeusuario2 > numerodeusuario3:
+   print(numerodeusuario2)
+   print("Este es el numero mas grande de todos")
+
+elif numerodeusuario3 > numerodeusuario2 and numerodeusuario3 >numerodeusuario1:
+   print(numerodeusuario3)
+   print("Este es el numero mas grande de todos")
+
+elif numerodeusuario2 == numerodeusuario1 and numerodeusuario2 == numerodeusuario3:
+   print("Todos los numeros son iguales")
+
+elif numerodeusuario1 == numerodeusuario2 and numerodeusuario1 == numerodeusuario3:
+   print("Todos los numeros son iguales")
+    
+elif numerodeusuario3 == numerodeusuario1 and numerodeusuario3 == numerodeusuario2:
+   print("Todos los numeros son iguales")
