@@ -1,0 +1,79 @@
+from os import system  
+system('cls')
+print("")
+import random
+finalizar="no"
+piedra=0
+tijera=-1
+papel=1
+eleccionjugador=None
+puntosIA=0
+puntosjugador=0
+eleccionIA=None
+
+
+
+
+while finalizar != eleccionjugador:
+    opcionjugador=input("elegi piedra, papel o tijera:  ")
+    eleccionIA = random.choice([piedra,tijera,papel])
+   
+    if eleccionIA == tijera and opcionjugador== "piedra":
+        print("La IA eligio tijera")
+        print("Vos ganaste")
+        puntosjugador+=1
+        eleccionjugador=input("¿Queres otra ronda? ")
+    elif eleccionIA == papel and opcionjugador == "piedra":
+        print("La IA eligio piedra")
+        print("La IA gano")  
+        puntosIA+=1
+        eleccionjugador=input("¿Queres otra ronda? ")
+    elif eleccionIA == piedra and opcionjugador == "piedra":
+        print("la IA eligrio piedra")    
+        print("Empate")
+        eleccionjugador=input("¿Queres otra ronda? ")
+
+
+
+
+       
+    if eleccionIA == tijera and opcionjugador == "papel":
+        print("La IA elgio tijera")
+        print("La IA gano")
+        puntosIA+=1  
+        eleccionjugador=input("¿Queres otra ronda? ")
+    elif eleccionIA == piedra and opcionjugador == "papel":
+        print("La IA eligio piedra")
+        print("Vos ganaste")
+        puntosjugador+=1
+        eleccionjugador=input("¿Queres otra ronda? ")
+    elif eleccionIA == papel and opcionjugador == "papel":
+        print("la IA eligrio papel")    
+        print("Empate")
+        eleccionjugador=input("¿Queres otra ronda? ")    
+
+
+
+
+    if eleccionIA == piedra and opcionjugador == "tijera":
+        print("La IA eligio piedra")
+        print("La IA gano")
+        eleccionjugador=input("¿Queres otra ronda? ")
+        puntosIA+=1
+    elif eleccionIA == papel and opcionjugador == "tijera":
+        print("La IA eligio papel")
+        print("Vos ganaste")  
+        puntosjugador+=1
+        eleccionjugador=input("¿Queres otra ronda? ")  
+    elif eleccionIA == tijera and opcionjugador == "tijera":
+        print("la IA eligrio tijera")    
+        print("Empate")
+        eleccionjugador=input("¿Queres otra ronda? ")
+
+
+
+
+if eleccionjugador== "no":
+    print("La IA gano", puntosIA, "rondas")
+    print("Ganaste", puntosjugador, "rondas")
+
