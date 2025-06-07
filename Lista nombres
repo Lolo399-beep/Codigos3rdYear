@@ -1,0 +1,10 @@
+from os import system
+system('cls')
+
+lista=[]
+i=0
+while(i<5):
+    nombre=input("ingrese un nombre" +str(i+1) +":")
+    lista.append(nombre)
+    i+=1
+    print(lista)
